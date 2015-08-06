@@ -6,8 +6,6 @@ import com.min.dao.ResultSetTableModel;
 import com.min.dao.model.UserDao;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.TableModel;
 
@@ -76,7 +74,7 @@ public class UsersFrame extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         newMenuItem = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
-        productsMenu = new javax.swing.JMenu();
+        emploiesMenu = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -116,7 +114,7 @@ public class UsersFrame extends javax.swing.JFrame {
                         .addComponent(deleteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(saveUpdateBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap(18, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -266,13 +264,13 @@ public class UsersFrame extends javax.swing.JFrame {
         jMenu2.setText("Edit");
         jMenuBar1.add(jMenu2);
 
-        productsMenu.setText("Products");
-        productsMenu.addMouseListener(new java.awt.event.MouseAdapter() {
+        emploiesMenu.setText("Emploies");
+        emploiesMenu.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                productsMenuMouseClicked(evt);
+                emploiesMenuMouseClicked(evt);
             }
         });
-        jMenuBar1.add(productsMenu);
+        jMenuBar1.add(emploiesMenu);
 
         setJMenuBar(jMenuBar1);
 
@@ -372,11 +370,11 @@ public class UsersFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_deleteBtnActionPerformed
 
-    private void productsMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_productsMenuMouseClicked
+    private void emploiesMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_emploiesMenuMouseClicked
         // TODO add your handling code here:
-        // new ProductFrame().setVisible(true);
-        System.exit(0);
-    }//GEN-LAST:event_productsMenuMouseClicked
+        new EmployeeFrame().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_emploiesMenuMouseClicked
 
     private void searchFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchFieldKeyReleased
         // TODO add your handling code here:
@@ -394,6 +392,7 @@ public class UsersFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel continerPanel;
     private javax.swing.JButton deleteBtn;
+    private javax.swing.JMenu emploiesMenu;
     private javax.swing.JTextField idField;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -405,7 +404,6 @@ public class UsersFrame extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JMenuItem newMenuItem;
     private javax.swing.JTextField passwordField;
-    private javax.swing.JMenu productsMenu;
     private javax.swing.JButton saveUpdateBtn;
     private javax.swing.JTextField searchField;
     private javax.swing.JPanel searchPanel;

@@ -27,12 +27,12 @@
             <Property name="text" type="java.lang.String" value="Edit"/>
           </Properties>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="productsMenu">
+        <Menu class="javax.swing.JMenu" name="emploiesMenu">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Products"/>
+            <Property name="text" type="java.lang.String" value="Emploies"/>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="productsMenuMouseClicked"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="emploiesMenuMouseClicked"/>
           </Events>
         </Menu>
       </SubComponents>
@@ -131,7 +131,7 @@
                               <Component id="deleteBtn" min="-2" pref="82" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="saveUpdateBtn" min="-2" pref="88" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace pref="18" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
