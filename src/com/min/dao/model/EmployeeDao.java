@@ -8,8 +8,8 @@ import java.sql.SQLException;
 
 public class EmployeeDao extends AbstractDao<Employee>{
 
-    private String tableName = "emploies";
-    private DAOFactory daoFactory;
+    private final String tableName = "emploies";
+    private final DAOFactory daoFactory;
 
     public EmployeeDao() throws Exception {
         daoFactory = DAOFactory.getInstance();;

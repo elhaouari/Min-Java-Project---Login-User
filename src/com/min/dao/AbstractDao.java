@@ -13,11 +13,10 @@ import java.util.List;
  */
 public abstract class AbstractDao<T extends AbstractBean> implements DAO<T>{
     
-    private String primaryKey;
+    private final String primaryKey;
     
     public AbstractDao(){
         this.primaryKey = "id";
-        this.primaryKey = this.getPrimaryKey();
     }
     
     /**
@@ -75,7 +74,7 @@ public abstract class AbstractDao<T extends AbstractBean> implements DAO<T>{
     @Override
     public boolean delete(T obj) throws SQLException, Exception {
         String sql = "DELETE FROM " + getTableName()  + " "
-                   + "WHERE " + primaryKey + " = ?";
+                   + "WHERE " + getPrimaryKey() + " = ?";
         
         return getDaoFactory().update(sql, obj.getId()) > 0;
     }
@@ -84,7 +83,7 @@ public abstract class AbstractDao<T extends AbstractBean> implements DAO<T>{
     public T find(Object id) throws SQLException, Exception {
         T item = null;
         String sql = "SELECT * FROM " + getTableName() + " "
-                   + "WHERE " + primaryKey + " = ?";
+                   + "WHERE " + getPrimaryKey() + " = ?";
         
         ResultSet rs = getDaoFactory().select(sql, id);
         if(rs.next()) {
